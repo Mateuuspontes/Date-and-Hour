@@ -18,7 +18,7 @@
                         Clique no botão abaixo e descubra!
                     </p>
 
-                    <input type="button" value="Hora Atual" id="descobrir" onclick="hora()" >
+                    <input type="button" value="Hora Atual" id="btn-hour" onclick="hora()" >
 
                     <h1 id="resposta1">
                     </h1>
@@ -35,7 +35,7 @@
                        Clique no botão abaixo e descubra!
                     </p>
 <br>
-                    <input type="button" value="Data de Hoje" id="saber" onclick="data()" >
+                    <input type="button" value="Data de Hoje" id="btn-date" onclick="data()" >
                     <h2 id="resposta2">
                      
                     </h2>
@@ -55,7 +55,8 @@
    
     var resposta2 = document.querySelector('#resposta2')
     var resposta1 = document.querySelector('#resposta1')
-    
+    var btnHour = document.querySelector('#btn-hour')
+    var btnDate = document.querySelector('#btn-date')
 
     function hora() {
         var h = new Date()
@@ -80,6 +81,8 @@
 
         var timer=setInterval(hora,1000);
 
+        btnHour.style.display='none'
+
                 
     }
         
@@ -87,6 +90,9 @@
     
 
     function data(){
+    btnDate.style.display='none'
+
+
     var d = new Date()
     var dia = d.getDay() 
 
