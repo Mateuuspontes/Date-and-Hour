@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body{
+body {
     height: 95vh;
     width: 100vw;
     text-align: center;
@@ -10,40 +10,97 @@ body{
     background-size: cover;
 }
 
-#h1-1{
+.h1-1 {
     font-size: 2em;
     padding: 20px;
-
 }
-input{
+
+input {
     text-align: center;
     margin-top: 15px;
     border-radius: 15px;
-    height: 30px;
+    height: 40px;
     font-size: 1.3em;
     background-color: rgb(240, 248, 255);
     color: black;
-    border-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
     font-weight: bold;
-    
-    
 }
 
-
-
-div{
-    margin: 40px auto 0px auto;
-    background-color: #053e675a;
+div {
+    margin: 40px auto;
+    background-color: rgba(5, 62, 103, 0.5);
     height: 40vh;
     width: 50vw;
-    color: white;            
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 
-#resposta1, #resposta2{
+#resposta1, #resposta2 {
     font-size: 2em;
-
-
 }
-div p{
-font-size: 1.5em;
+
+div p {
+    font-size: 1.5em;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    body {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    div {
+        width: 80vw;
+        height: auto;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .h1-1 {
+        font-size: 1.5em;
+    }
+
+    input {
+        font-size: 1em;
+        height: 35px;
+    }
+
+    #resposta1, #resposta2 {
+        font-size: 1.5em;
+    }
+
+    div p {
+        font-size: 1.2em;
+    }
+}
+
+/* Responsividade para dispositivos muito pequenos */
+@media (max-width: 480px) {
+    div {
+        width: 90vw;
+        height: auto;
+        padding: 10px;
+    }
+
+    .h1-1 {
+        font-size: 1.2em;
+    }
+
+    input {
+        font-size: 0.9em;
+        height: 30px;
+    }
+
+    #resposta1, #resposta2 {
+        font-size: 1.2em;
+    }
+
+    div p {
+        font-size: 1em;
+    }
 }
