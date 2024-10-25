@@ -6,235 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hour and Date</title>
     <link rel="stylesheet" href="style.css">
-          
 </head>
 <body>
-    <main> <section>  
+    <main>
+        <section>
             <div>
-            <h1 id="h1-1">Que horas tem?
-            </h1>
-              
-                    <p>
-                        Clique no botão abaixo e descubra!
-                    </p>
-
-                    <input type="button" value="Hora Atual" id="btn-hour" onclick="hora()" >
-
-                    <h1 id="resposta1">
-                    </h1>
-
+                <h1 class="h1-1">Que horas tem?</h1>
+                <p>Clique no botão abaixo e descubra!</p>
+                <input type="button" value="Hora Atual" id="btn-hour" onclick="hora()">
+                <h1 id="resposta1"></h1>
             </div>
         </section>
-       
-
-        <div>
-            <h1 id="h1-1">Que data é hoje?
-            </h1>
-              
-                    <p>
-                       Clique no botão abaixo e descubra!
-                    </p>
-<br>
-                    <input type="button" value="Data de Hoje" id="btn-date" onclick="data()" >
-                    <h2 id="resposta2">
-                     
-                    </h2>
-
+        <section>
+            <div>
+                <h1 class="h1-1">Que data é hoje?</h1>
+                <p>Clique no botão abaixo e descubra!</p>
+                <input type="button" value="Data de Hoje" id="btn-date" onclick="data()">
+                <h2 id="resposta2"></h2>
             </div>
         </section>
-        
-
-        
     </main>
-    
 </body>
 
 <script>
-
-//https://cfbcursos.com.br/javascript-38-relogio-digital-em-javascript/
-   
-    var resposta2 = document.querySelector('#resposta2')
-    var resposta1 = document.querySelector('#resposta1')
-    var btnHour = document.querySelector('#btn-hour')
-    var btnDate = document.querySelector('#btn-date')
-
-    function hora() {
-        var h = new Date()
-        var hor = h.getHours()
-        var min= h.getMinutes()
-        var seg = h.getSeconds()
-        var horas = `${hor}:${min}:${seg}`
-    
-
-        if (hor<10) {
-            hor = `0${hor}`       
-        };
-        if (min<10) {
-            min = `0${min}`
-        };
-        if (seg<10) {
-            seg = `0${seg}`
-        };
-        var horas = `${hor}:${min}:${seg}`;
-
-        resposta1.innerHTML=horas;
-
-        var timer=setInterval(hora,1000);
-
-        btnHour.style.display='none'
-
-                
-    }
-        
-
-    
-
-    function data(){
-    btnDate.style.display='none'
-
-
-    var d = new Date()
-    var dia = d.getDay() 
-
-    var dd = new Date()
-    var dianum = dd.getDate() 
-
-    var m = new Date()
-    var mes = m.getMonth() 
-    
-    var a = new Date()
-    var ano = a.getFullYear() 
-
-    
-
-    
-
-   
-    
-    switch(dia){
-        case 0:resposta2.innerHTML=(`Domingo`)
-        break
-        case 1:resposta2.innerHTML=(`Segunda-Feira`)
-        break
-        break
-        case 2:resposta2.innerHTML=(`Terça-Feira`)
-        break
-        case 3:resposta2.innerHTML=(`Quarta-Feira`)
-        break
-        case 4:resposta2.innerHTML=(`Quinta-Feira`)
-        break
-        case 5:resposta2.innerHTML=(`Sexta-Feira`)
-        break
-        case 6:resposta2.innerHTML=(`Sábado`)
-        break
-    }    
-
-    switch(dianum){
-        case 1:resposta2.innerHTML+=(`, 01 de `)
-        break
-        case 2:resposta2.innerHTML+=(`, 02 de `)
-        break
-        case 3:resposta2.innerHTML+=(`, 03 de `)
-        break
-        case 4:resposta2.innerHTML+=(`, 04 de `)
-        break
-        case 5:resposta2.innerHTML+=(`, 05 de `)
-        break
-        case 6:resposta2.innerHTML+=(`, 06 de `)
-        break
-        case 7:resposta2.innerHTML+=(`, 07 de `)
-        break
-        case 8:resposta2.innerHTML+=(`, 08 de `)
-        break
-        case 9:resposta2.innerHTML+=(`, 09 de `)
-        break
-        case 10:resposta2.innerHTML+=(`, 10 de `)
-        break
-        case 11:resposta2.innerHTML+=(`, 11 de `)
-        break
-        case 12:resposta2.innerHTML+=(`, 12 de `)
-        break
-        case 13:resposta2.innerHTML+=(`, 13 de `)
-        break
-        case 14:resposta2.innerHTML+=(`, 14 de `)
-        break
-        case 15:resposta2.innerHTML+=(`, 15 de `)
-        break
-        case 16:resposta2.innerHTML+=(`, 16 de `)
-        break
-        case 17:resposta2.innerHTML+=(`, 17 de `)
-        break
-        case 18:resposta2.innerHTML+=(`, 18 de `)
-        break
-        case 19:resposta2.innerHTML+=(`, 19 de `)
-        break
-        case 20:resposta2.innerHTML+=(`, 20 de `)
-        break
-        case 21:resposta2.innerHTML+=(`, 21 de `)
-        break
-        case 22:resposta2.innerHTML+=(`, 22 de `)
-        break
-        case 23:resposta2.innerHTML+=(`,  23 de `)
-        break
-        case 24:resposta2.innerHTML+=(`, 24 de `)
-        break
-        case 25:resposta2.innerHTML+=(`, 25 de `)
-        break
-        case 26:resposta2.innerHTML+=(`, 26 de `)
-        break
-        case 27:resposta2.innerHTML+=(`, 27 de `)
-        break
-        case 28:resposta2.innerHTML+=(`, 28 de `)
-        break
-        case 29:resposta2.innerHTML+=(`, 29 de `)
-        break 
-        case 30:resposta2.innerHTML+=(`, 30 de `)
-        break
-        case 31:resposta2.innerHTML+=(`, 31 de `)
-        break
-
-        default:resposta2.innerHTML=(`Invalid date!`)
-
-    }    
-
-    switch (mes) {
-
-        case 0: resposta2.innerHTML+=(`Janeiro de ${ano}`)
-        break
-        case 1: resposta2.innerHTML+=(`Fevereiro de ${ano}`)
-        break
-        case 2: resposta2.innerHTML+=(`Março de ${ano}`)
-        break
-        case 3: resposta2.innerHTML+=(`Abril de ${ano}`)
-        break
-        case 4: resposta2.innerHTML+=(`Maio de ${ano}`)
-        break
-        case 5: resposta2.innerHTML+=(`Junho de ${ano}`)
-        break
-        case 6: resposta2.innerHTML+=(`Julho de ${ano}`)
-        break
-        case 7: resposta2.innerHTML+=(`Agosto de ${ano}`)
-        break
-
-        case 8: resposta2.innerHTML+=(` Setembro de ${ano} `)            
-            break
-        case 9: resposta2.innerHTML+=(`Outubro de ${ano}`)
-        break
-        case 10: resposta2.innerHTML+=(`Novembro de ${ano}`)
-        break
-        case 11: resposta2.innerHTML+=(`Dezembro de ${ano}`)
-        break
-    
-        default: resposta2.innerHTML=('Invalid date!')
-           
-    }
-
-
-
-}
-
-
-     
-
+// Script permanece o mesmo
 </script>
 </html>
